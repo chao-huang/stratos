@@ -76,6 +76,7 @@ import { InviteUsersComponent } from './users/invite-users/invite-users.componen
 import { RemoveUserComponent } from './users/remove-user/remove-user.component';
 import { UsersRolesComponent } from './users/manage-users/manage-users.component';
 
+
 /* tslint:enable:max-line-length */
 const usersRoles = [
   {
@@ -166,7 +167,6 @@ const cloudFoundry: Routes = [{
         {
           path: '',
           data: {
-            uiFullView: true,
             extensionsActionsKey: StratosActionType.Application
           },
           component: CloudFoundryTabsBaseComponent,
@@ -233,9 +233,6 @@ const cloudFoundry: Routes = [{
             {
               path: 'cells/:cellId',
               component: CloudFoundryCellBaseComponent,
-              data: {
-                uiFullView: true
-              },
               children: [
                 {
                   path: '',
@@ -260,7 +257,6 @@ const cloudFoundry: Routes = [{
               path: 'organizations/:orgId',
               component: CloudFoundryOrganizationBaseComponent,
               data: {
-                uiFullView: true,
                 extensionsActionsKey: StratosActionType.CloudFoundryOrg
               },
               children: [
@@ -294,7 +290,6 @@ const cloudFoundry: Routes = [{
             {
               path: 'organizations/:orgId/spaces/:spaceId',
               data: {
-                uiFullView: true,
                 extensionsActionsKey: StratosActionType.CloudFoundrySpace
               },
               component: CloudFoundrySpaceBaseComponent,
